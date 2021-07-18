@@ -1,6 +1,6 @@
 {
-    "repoUrl": "https://github.com/digitalorigin/cp-customers-event-mediator.git",
-    "branch": "argocd-test",
+    "repoUrl": "https://github.com/jramospagantis/argocd.git",
+    "branch": "master",
     "environment": "default",
     "appName": "argocd",
     "domainName": "ops",
