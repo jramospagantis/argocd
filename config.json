@@ -1,0 +1,13 @@
+{
+    "repoUrl": "https://github.com/digitalorigin/cp-customers-event-mediator.git",
+    "branch": "argocd-test",
+    "environment": "default",
+    "appName": "argocd",
+    "domainName": "ops",
+    "cluster": {
+        "url": "https://kubernetes.default.svc",
+        "name": "cp-k8s-ifr"
+    },
+    "helmValuesFile": "values.yaml",
+    "path": "charts"
+}

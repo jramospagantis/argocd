@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: applicationset-jramos
+  namespace: argocd
+spec:
+  generators:
+  - git:
+      files:
+      - path: config.json
+      repoURL: https://github.com/jramospagantis/argocd.git
+      revision: master
+  template:
+    metadata:
+      name: '{{appName}}-jramos'
+    spec:
+      destination:
+        server: '{{cluster.url}}'
+      project: default
+      source:
+        path: '{{appPath}}'
+        repoURL: '{{repoUrl}}'
+        targetRevision: HEAD
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+
